@@ -1,0 +1,30 @@
+driver_data
+- driver ID is unique for every row
+
+sensor_data
+- There are multiple rows with same bookingID
+- The number of seconds is unique within each bookingID
+
+safety_labels
+- The bookingID is unique for each row
+- There are multiple rows with same driver ID
+
+
+Logic:
+- A driver can have multiple bookings
+- Each booking must belong to only one driver
+- Each booking can have multiple sensor data
+- Each sensor data must belong to only one booking
+- Each booking sensor data have a unique number of seconds
+
+
+Table 1: Driver (driver_data.csv)
+PK: Driver ID
+
+Table 2: Trip Safety (safety_labels.csv)
+PK: Booking ID
+FK: Driver ID (from Driver)
+
+Table 3: Sensor Data (sensor_data files)
+PK: Booking ID, Seconds
+FK: Booking ID (from Trip Safety)
