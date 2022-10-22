@@ -22,7 +22,7 @@ GO
 
 -- Script to load sensor data
 
--- create temporary table to store all numbers as varchar
+-- create temporary table to store all numbers as varchar 
 CREATE TABLE #tempTable (
     [booking_id] VARCHAR(100) NOT NULL,
     [accuracy] VARCHAR(100) NULL,
@@ -38,9 +38,29 @@ CREATE TABLE #tempTable (
 )
 GO
 
--- load sensor data to temporary table
+-- load all 5 sensor data to temporary table
 BULK INSERT #tempTable 
 FROM 'C:\pai_data\sensor_data\sensor_data_part-1.csv' 
+WITH (ROWTERMINATOR='\n', FIELDTERMINATOR=',', FIRSTROW = 2);
+GO
+
+BULK INSERT #tempTable 
+FROM 'C:\pai_data\sensor_data\sensor_data_part-2.csv' 
+WITH (ROWTERMINATOR='\n', FIELDTERMINATOR=',', FIRSTROW = 2);
+GO
+
+BULK INSERT #tempTable 
+FROM 'C:\pai_data\sensor_data\sensor_data_part-3.csv' 
+WITH (ROWTERMINATOR='\n', FIELDTERMINATOR=',', FIRSTROW = 2);
+GO
+
+BULK INSERT #tempTable 
+FROM 'C:\pai_data\sensor_data\sensor_data_part-4.csv' 
+WITH (ROWTERMINATOR='\n', FIELDTERMINATOR=',', FIRSTROW = 2);
+GO
+
+BULK INSERT #tempTable 
+FROM 'C:\pai_data\sensor_data\sensor_data_part-5.csv' 
 WITH (ROWTERMINATOR='\n', FIELDTERMINATOR=',', FIRSTROW = 2);
 GO
 
@@ -49,7 +69,7 @@ INSERT INTO sensor_data
     (booking_id, accuracy, bearing, acceleration_x, acceleration_y, acceleration_z, gyro_x, gyro_y, gyro_z, second, speed)
 SELECT 
     booking_id,
-    -- this is to convert the string to floating precision, then to decimal number
+    -- this is to convert the string to floating precision (the number will be in Exponential format if its too large), then to decimal number
     -- this is required as MSSQL does not automatically convert exponential expression to decimal
     CONVERT(DECIMAL(38,25), CAST(accuracy AS FLOAT)),
     CONVERT(DECIMAL(38,25), CAST(bearing AS FLOAT)),
