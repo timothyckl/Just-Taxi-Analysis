@@ -1,0 +1,24 @@
+accuracy
+https://www.gps.gov/systems/gps/performance/accuracy/
+- GPS accuracy is a radius of how close the calculated position is to the actual position of the receiver
+- Average accuracy is 4.9m under open sky, accuracy worsens under buildings, bridges, and trees
+- GPS accuracy can be improved using dual-frequency receivers and/or augmentation systems
+
+bearing
+- Bearing is the direction the receiver is facing relative to true north in degrees, where north is 0 degrees
+- Bearing is in clockwise direction from north (NESW)
+
+speed
+- the speed of the receiver (meters per second)
+
+second
+- the second which the data was collected (assuming that 0s is the start of the ride, where gps receiver is turned on)
+
+accelerometer data
+- Useful: https://www.explainthatstuff.com/accelerometers.html
+- "An accelerometer is a device that measures the vibration, or acceleration of motion of a structure" - https://www.omega.com/en-us/resources/accelerometers
+- accelerometer data is collected from the phone's accelerometer sensor (assumption made here)
+- accelerometer can sense only the change of the speed
+- accelerometer uses F=ma to calculate the acceleration of the phone 
+
+gyroscope
