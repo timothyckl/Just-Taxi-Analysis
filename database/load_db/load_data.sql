@@ -38,6 +38,21 @@ CREATE TABLE #tempTable (
 )
 GO
 
+-- CREATE TABLE #tempTable (
+--     [booking_id] BIGINT NOT NULL,
+--     [accuracy] FLOAT NULL,
+--     [bearing] FLOAT NULL,
+--     [acceleration_x] FLOAT NULL,
+--     [acceleration_y] FLOAT NULL,
+--     [acceleration_z] FLOAT NULL,
+--     [gyro_x] FLOAT NULL,
+--     [gyro_y] FLOAT NULL,
+--     [gyro_z] FLOAT NULL,
+--     [second] FLOAT NOT NULL,
+--     [speed] FLOAT NULL
+-- )
+-- GO
+
 -- load all 5 sensor data to temporary table
 BULK INSERT #tempTable 
 FROM 'C:\pai_data\sensor_data\sensor_data_part-1.csv' 

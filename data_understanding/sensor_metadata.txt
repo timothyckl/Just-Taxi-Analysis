@@ -20,5 +20,20 @@ accelerometer data
 - accelerometer data is collected from the phone's accelerometer sensor (assumption made here)
 - accelerometer can sense only the change of the speed
 - accelerometer uses F=ma to calculate the acceleration of the phone 
+- it is affected by gravity
+- use sqrt(x^2 + y^2 + z^2) to calculate the MAGNITUDE of the acceleration (https://physics.stackexchange.com/questions/41653/how-do-i-get-the-total-acceleration-from-3-axes)
+https://www.quora.com/How-do-I-calculate-total-acceleration-from-the-x-y-and-z-g-force-values-given-by-an-accelerometer
 
 gyroscope
+- measures angular velocity in radians/s (angular velocity is rate of change of angular position on rotating body)
+- IDEA: y-axis of gyroscope can be used to determine if a car is rolling over, (high angular velocity)
+- https://www.diva-portal.org/smash/get/diva2:1139911/FULLTEXT01.pdf
+
+
+Useful (accelerometer and gyroscope):
+- https://www.w3.org/TR/motion-sensors/#:~:text=3.1.-,Accelerometer,but%20is%20affected%20by%20gravity.
+ 
+
+
+Kalman filter:
+https://www.digikey.com/en/articles/apply-sensor-fusion-to-accelerometers-and-gyroscopes
