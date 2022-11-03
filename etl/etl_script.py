@@ -68,8 +68,7 @@ def load(final_data):
     print("ETL script completed")
 
 
-
-# change to your own device name
-driver_data, trip_data, sensor_data = extract(device_name='WATER', database='JustTaxi')
+device_name = os.environ['COMPUTERNAME']
+driver_data, trip_data, sensor_data = extract(device_name=device_name, database='JustTaxi')
 final_data = transform(driver_data, trip_data, sensor_data)
 load(final_data)
