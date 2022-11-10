@@ -9,15 +9,15 @@ Deadline: 2022-12-02 23:59H
 
 - [ ] A well-written **project report** (<20 pages), describing all work done in phase one.
 - [ ] A **Jupyter Notebook** 
-  - [ ] Data pre-processing
-  - [ ] Data cleansing
-  - [ ] Exploratory data analysis
+  - [x] Data pre-processing
+  - [x] Data cleansing
+  - [x] Exploratory data analysis
   - [ ] Simple data visualization.
 - [ ] A **Tableau** or **Power BI dashboard** file (*.twbx or *.pbix).
 - [ ] **PowerPoint Slides** (<30 pages) for a 20-minute presentation
 - [ ] **Scrum Document**
   - [ ] User Story
-  - [ ] Product Backlog
+  - [x] Product Backlog
   - [ ] Bi-Weekly Scrum Reports. 
 - [ ] **Peer Evaluation Form** (every individual student needs to submit the form).
 
