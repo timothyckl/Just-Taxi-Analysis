@@ -382,7 +382,7 @@
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
-      <column datatype='integer' name='[Acceleration X (bin)]' role='dimension' type='quantitative'>
+      <column aggregation='None' datatype='integer' name='[Acceleration X (bin)]' role='dimension' type='quantitative'>
         <calculation class='bin' decimals='-1' formula='[acceleration_x]' peg='0' size='0.9' />
       </column>
       <column caption='Ratio' datatype='real' name='[Calculation_957577903829897216]' role='measure' type='ordinal'>
@@ -1191,8 +1191,8 @@ As we can see the dangerous rides have the higher magnitude of angular velocity 
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='27' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='26' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='29' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='28' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Acceleration distibution safe and unsafe' w='49200' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1271,8 +1271,8 @@ As we can see the dangerous rides have the higher magnitude of angular velocity 
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='107' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='106' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='109' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='108' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='Identify dangerous drivers ver 1' w='82400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1396,8 +1396,8 @@ As we can see the dangerous rides have the higher magnitude of angular velocity 
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='950' minheight='950' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='149' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='148' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='151' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='150' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone h='10250' id='8' mode='checkdropdown' name='Most dangerous telematics' param='[federated.0rsok931smybg916155xa08de7ap].[Set 2]' type-v2='filter' w='16000' x='83200' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1800,7 +1800,7 @@ As we can see the dangerous rides have the higher magnitude of angular velocity 
       <active id='-1' />
       <simple-id uuid='{7DB6B07F-7990-450F-9472-BCD201D0FAE4}' />
     </window>
-    <window class='dashboard' maximized='true' name='How did each ride go?'>
+    <window class='dashboard' name='How did each ride go?'>
       <viewpoints>
         <viewpoint name='Acceleration and magnitude for dangerous rides'>
           <selection-collection>
@@ -1831,7 +1831,7 @@ As we can see the dangerous rides have the higher magnitude of angular velocity 
       <active id='-1' />
       <simple-id uuid='{E77CD2A2-AB4D-44CF-A98A-288ACD7906E1}' />
     </window>
-    <window class='dashboard' name='Difference in distribution for telematics data for safe and unsafe'>
+    <window class='dashboard' maximized='true' name='Difference in distribution for telematics data for safe and unsafe'>
       <viewpoints>
         <viewpoint name='Acceleration distibution safe and unsafe'>
           <zoom type='entire-view' />
