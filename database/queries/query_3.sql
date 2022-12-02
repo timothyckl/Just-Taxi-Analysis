@@ -23,7 +23,7 @@ from
 	from trips  t, drivers  d 
 	group by d.gender
 	) y on x.gender = y.gender
-where d.gender = x.gender
+	where d.gender = x.gender
 
-group by d.gender
+	group by d.gender
  
