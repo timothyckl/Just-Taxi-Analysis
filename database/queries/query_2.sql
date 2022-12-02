@@ -19,4 +19,4 @@ from
 		group by convert(int, driver_id)
 	) y on x.driver_id = y.driver_id
 order by 
-x.driver_id;
+danger_pct desc;
